@@ -16,7 +16,7 @@ public class DragDropTest {
     }
 
     @Test
-    void DragDropAToBAction() {
+    void DragDropAToBActionTest() {
 
         open("/drag_and_drop");
         $("#column-a").shouldHave(text("A"));
@@ -27,7 +27,7 @@ public class DragDropTest {
     }
 
     @Test
-    void DragDropAToBElement() {
+    void DragDropAToBElementTest() {
         open("/drag_and_drop");
         $("#column-a").shouldHave(text("A"));
         $("#column-b").shouldHave(text("B"));
