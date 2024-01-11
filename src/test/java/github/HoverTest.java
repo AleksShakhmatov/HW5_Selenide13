@@ -10,9 +10,8 @@ public class HoverTest {
 
     @Test
     void shouldFindPageWithHeading() {
-        // open selenide repository
         open("https://github.com/");
-        $("ul.d-lg-flex.list-style-none").$(byText("Solutions")).hover();
+        $(".header-menu-wrapper").$(byText("Solutions")).hover();
         $("[href='/enterprise']").click();
         $("#hero-section-brand-heading").shouldHave(text("The AI-powered developer platform."));
 
