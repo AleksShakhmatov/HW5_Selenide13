@@ -21,7 +21,7 @@ public class DragDropTest {
         open("/drag_and_drop");
         $("#column-a").shouldHave(text("A"));
         $("#column-b").shouldHave(text("B"));
-        actions().moveToElement($("#column-a")).clickAndHold().moveByOffset(200, 0).release().perform();
+        actions().dragAndDrop($("#column-a"), $("#column-b")).perform();
         $("#column-a").shouldHave(text("B"));
         $("#column-b").shouldHave(text("A"));
     }
